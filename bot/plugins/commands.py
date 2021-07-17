@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰Official Channel🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
                                 )
                         ]
                     ]
@@ -57,7 +57,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰Official Channel🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
                                 )
                         ]
                     ]
@@ -76,7 +76,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰Official Channel🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
                                 )
                         ]
                     ]
