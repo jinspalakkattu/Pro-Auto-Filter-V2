@@ -4,7 +4,7 @@
 
 class Translation(object):
     
-    START_TEXT =  """<b>🙋‍♂️Hey {}!!</b>
+    START_TEXT = """ <code>hello welcome! How are you </code>
 
  <b>എന്നെ All Movies Group യിൽ മാത്രമേ ഉപയോഗിക്കാൻ കഴിയൂ </b>
 """   
