@@ -4,10 +4,7 @@
 
 class Translation(object):
     
-    START_TEXT = """ <code>hello welcome! How are you </code>
-
- <b>എന്നെ All Movies Group യിൽ മാത്രമേ ഉപയോഗിക്കാൻ കഴിയൂ </b>
-"""   
+    START_TEXT = """ <code>hello welcome! How are you </code> """ 
     
     HELP_TEXT = """
  <b>കണ്ട ബട്ടൺ CLICK ചെയ്ത്  HELP ചോദിയ്ക്കാൻ ഇത് നിന്റെ വമ്പാടി തറവാട് അല്ല... കിട്ടുന്ന MOVIES DOWNLOAD ചെയ്തോണ്ട് പോയിക്കോണം... </b>   
