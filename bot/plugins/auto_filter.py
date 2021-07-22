@@ -156,6 +156,48 @@ async def auto_filter(bot, update):
             InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
         ])
        
+        # if show_invite is True Append invite link buttons
+        if show_invite:
+            
+            ibuttons = []
+            achatId = []
+            await gen_invite_links(configs, group_id, bot, update)
+            
+            for x in achats["chats"] if isinstance(achats, dict) else achats:
+                achatId.append(int(x["chat_id"])) if isinstance(x, dict) else achatId.append(x)
+
+            ACTIVE_CHATS[str(group_id)] = achatId
+            
+            for y in INVITE_LINK.get(str(group_id)):
+                
+                chat_id = int(y["chat_id"])
+                
+                if chat_id not in achatId:
+                    continue
+                
+                chat_name = y["chat_name"]
+                invite_link = y["invite_link"]
+                
+                if ((len(ibuttons)%2) == 0):
+                    ibuttons.append(
+                        [
+                            InlineKeyboardButton(f"⚜ {chat_name} ⚜", url=invite_link)
+                        ]
+                    )
+
+                else:
+                    ibuttons[-1].append(
+                        InlineKeyboardButton(f"⚜ {chat_name} ⚜", url=invite_link)
+                    )
+                
+            for x in ibuttons:
+                result[0].insert(0, x) #Insert invite link buttons at first of page
+                
+            ibuttons = None # Free Up Memory...
+            achatId = None
+            
+            
+        reply_markup = InlineKeyboardMarkup(result[0])
 else:
         Send_message = await bot.send_message(
             chat_id=update.chat.id,
@@ -171,13 +213,37 @@ else:
         ),
             reply_to_message_id=update.message_id
         )
-        await asyncio.sleep(60)
+        await asyncio.sleep(5)
         await Send_message.delete()
     
 
     if len(results) == 0: # double check
         return
+    
+    else:
+    
+        result = []
+        # seperating total files into chunks to make as seperate pages
+        result += [results[i * max_per_page :(i + 1) * max_per_page ] for i in range((len(results) + max_per_page - 1) // max_per_page )]
+        len_result = len(result)
+        len_results = len(results)
+        results = None # Free Up Memory
+        
+        FIND[query] = {"results": result, "total_len": len_results, "max_pages": max_pages} # TrojanzHex's Idea Of Dicts😅
 
+        # Add next buttin if page count is not equal to 1
+        if len_result != 1:
+            result[0].append(
+                [
+                    InlineKeyboardButton("ɴᴇxᴛ >>", callback_data=f"navigate(0|next|{query})")
+                ]
+            )
+        
+        # Just A Decaration
+        result[0].append([
+            InlineKeyboardButton(f"🗒 ᴘᴀɢᴇ 1/{len_result if len_result < max_pages else max_pages} ", callback_data="ignore")
+        ])
+        
         
         # if show_invite is True Append invite link buttons
         if show_invite:
