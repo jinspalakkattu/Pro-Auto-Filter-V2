@@ -124,28 +124,6 @@ async def auto_filter(bot, update):
                     InlineKeyboardButton(button_text, url=file_link)
                 ]
             )
-    
-  else:
-        Send_message = await bot.send_message(
-            chat_id=update.chat.id,
-            text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
-                    )
-                ]
-            ]
-        ),
-            reply_to_message_id=update.message_id
-        )
-        await asyncio.sleep(60)
-        await Send_message.delete()
-    
-
-    if len(results) == 0: # double check
-        return
 
     else:
         return # return if no files found for that query
@@ -177,7 +155,29 @@ async def auto_filter(bot, update):
         result[0].append([
             InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
         ])
-        
+       
+else:
+        Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
+                    )
+                ]
+            ]
+        ),
+            reply_to_message_id=update.message_id
+        )
+        await asyncio.sleep(60)
+        await Send_message.delete()
+    
+
+    if len(results) == 0: # double check
+        return
+
         
         # if show_invite is True Append invite link buttons
         if show_invite:
