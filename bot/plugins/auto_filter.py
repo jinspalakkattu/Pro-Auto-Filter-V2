@@ -126,7 +126,7 @@ async def auto_filter(bot, update):
                 file_link = f"https://t.me/{bot_.username}?start={unique_id}"
             
             results.append([
-            InlineKeyboardButton("📂 " + f_size, file_names, url=file_link),
+            InlineKeyboardButton("📂 " + file_names, url=file_link),
         ])
             
         
