@@ -126,7 +126,8 @@ async def auto_filter(bot, update):
                 file_link = f"https://t.me/{bot_.username}?start={unique_id}"
             
             results.append([
-            InlineKeyboardButton("📂 " + file_names, url=file_link)
+            InlineKeyboardButton("📂 " + file_names, url=file_link),
+            InlineKeyboardButton(f_size, url=file_link)
         ])
             
         
@@ -145,7 +146,7 @@ async def auto_filter(bot, update):
         ),
             reply_to_message_id=update.message_id
         )
-        await asyncio.sleep(120)
+        await asyncio.sleep(5)
         await Send_message.delete()
     
 
@@ -220,7 +221,24 @@ async def auto_filter(bot, update):
             
         reply_markup = InlineKeyboardMarkup(result[0])
 
- 
+        try:
+           await bot.send_photo(
+                chat_id=update.chat.id,
+                photo="https://telegra.ph/file/fb7653f382fc48f93b9db.jpg",
+                caption=f"<b>𝐆𝐫𝐨𝐮𝐩:- <b>@all_movies_official_group</b> \n𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- {query} \n𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐮𝐧𝐝:- {(len_results)} \n𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} \n\n𝗣𝗿𝗲𝘀𝘀 𝗧𝗵𝗲 𝗗𝗼𝘄𝗻 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 𝗧𝗼 𝗔𝗰𝗰𝗲𝘀𝘀 𝗧𝗵𝗲 𝗙𝗶𝗹𝗲 \n\nപടം ലഭിക്കുന്നതിനായി താഴെ കാണുന്ന ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുക👇</b>",
+                reply_markup=reply_markup,
+                parse_mode="html",
+                reply_to_message_id=update.message_id
+           )
+           
+        except ButtonDataInvalid:
+            print(result[0])
+        
+        except Exception as e:
+            print(e)
+
+          
+
 
 async def gen_invite_links(db, group_id, bot, update):
     """
@@ -247,26 +265,7 @@ async def gen_invite_links(db, group_id, bot, update):
             Links.append({"chat_id": chatId, "chat_name": Name, "invite_link": Link})
 
         INVITE_LINK[str(group_id)] = Links
-    return
-
-        try:
-           await bot.send_photo(
-                chat_id=update.chat.id,
-                photo="https://telegra.ph/file/2d1e6c43b96fe15f29e61.jpg",
-                caption=f"<b>𝐆𝐫𝐨𝐮𝐩:- <b>@MGMOVIEGRAM</b> \n𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- {query} \n𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐮𝐧𝐝:- {(len_results)} \n𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} \n\n𝗣𝗿𝗲𝘀𝘀 𝗧𝗵𝗲 𝗗𝗼𝘄𝗻 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 𝗧𝗼 𝗔𝗰𝗰𝗲𝘀𝘀 𝗧𝗵𝗲 𝗙𝗶𝗹𝗲 \n\nപടം ലഭിക്കുന്നതിനായി താഴെ കാണുന്ന ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുക👇</b>",
-                reply_markup=reply_markup,
-                parse_mode="html",
-                reply_to_message_id=update.message_id
-           )
-           
-        except ButtonDataInvalid:
-            print(result[0])
-        
-        except Exception as e:
-            print(e)
-
-          
-
+    return 
 
 
 async def recacher(group_id, ReCacheInvite=True, ReCacheActive=False, bot=Bot, update=Message):
