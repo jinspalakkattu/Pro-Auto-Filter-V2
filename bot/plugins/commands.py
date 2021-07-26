@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰Official Channel🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
                                 )
                         ]
                     ]
@@ -57,7 +57,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰Official Channel🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
                                 )
                         ]
                     ]
@@ -76,7 +76,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰Official Channel🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
                                 )
                         ]
                     ]
@@ -92,12 +92,12 @@ async def start(bot, update):
         InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/joinchat/NGvoejZMNlQ5Mjg1'),
         InlineKeyboardButton('𝙷𝚎𝚕𝚙 🤔', callback_data="help")
     ],[
-        InlineKeyboardButton('⚜️ Main Channel ⚜️', url='https://youtu.be/uAHl5jvnrhk')
+        InlineKeyboardButton('🔰 English Movies 🔰', url='https://t.me/AM_English_Movies')
     ],[
-        InlineKeyboardButton('🔰 English Movies 🔰', url='https://t.me/AM_English_Movies'),
+        InlineKeyboardButton('⚜️ Official channel ⚜️', url='https://t.me/joinchat/NGvoejZMNlQ5Mjg1'),
+        InlineKeyboardButton('⚜️ New Release ⚜️', url='https://t.me/all_movie_New_Released')
+    ],[
         InlineKeyboardButton('🔰 Malayalam Movies 🔰', url='https://t.me/Kala_Movies')
-    ],[
-        InlineKeyboardButton('⚜️ New released ⚜️', url='https://t.me/all_movie_New_Released')
    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
