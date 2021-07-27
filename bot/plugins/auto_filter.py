@@ -60,7 +60,7 @@ async def auto_filter(bot, update):
     filters = await db.get_filters(group_id, query)
     
     if filters:
-results.append(
+        results.append(
                 [
                     InlineKeyboardButton("🔘 JOIN OUR MAIN CHANNEL 🔘", url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1")
                 ]
