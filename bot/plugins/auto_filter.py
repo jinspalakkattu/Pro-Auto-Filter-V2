@@ -131,7 +131,22 @@ async def auto_filter(bot, update):
             )
         
     else:
-        return # return if no files found for that query
+        Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
+                    )
+                ]
+            ]
+        ),
+            reply_to_message_id=update.message_id
+        )
+        await asyncio.sleep(300)
+        await Send_message.delete()
     
 
     if len(results) == 0: # double check
