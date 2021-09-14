@@ -62,13 +62,13 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Join Main Channel 🔰', url=f"{https://t.me/joinchat/NGvoejZMNlQ5Mjg1}"
+                                    '🔔Join Main Channel🔔', url=f"{MT_CHANNEL}"
                                 )
                         ],
                         [
                             InlineKeyboardButton
                                 (
-                                    '⭕️ New Release Channel ⭕️', url=f"{https://t.me/all_movie_New_Released}"
+                                    '🔊 Bot Updates 🔊', url=f"{MT_BOT_UPDATES}"
                                 )
                         ]
                     ]
@@ -87,7 +87,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '⭕️ Official Channel ⭕️', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '👨‍💼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 👨‍💼', url="https://t.me/Mo_TECH_YT"
                                 )
                         ]
                     ]
@@ -106,7 +106,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '⭕️ Official Channel ⭕️', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '👨‍💼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 👨‍💼', url="https://t.me/Mo_TECH_YT"
                                 )
                         ]
                     ]
@@ -119,13 +119,13 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/joinchat/NGvoejZMNlQ5Mjg1}'),
+        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{MRK_YT_MASTER}'),
         InlineKeyboardButton('Help 🤔', callback_data="help")
     ],[
-        InlineKeyboardButton('⚜️ Group ⚜️', url=f'{https://t.me/all_movies_official_group}'),
-        InlineKeyboardButton('⭕️ Channel ⭕️', url=f'{https://t.me/joinchat/NGvoejZMNlQ5Mjg1}')
+        InlineKeyboardButton('🗣️Group', url=f'{MT_GROUP}'),
+        InlineKeyboardButton('Channel🔊', url=f'{MT_CHANNEL}')
     ],[
-        InlineKeyboardButton('🔰 Malayalam Movies 🔰', url='https://youtu.be/OTqZmADyOjU')
+        InlineKeyboardButton('🖥️ Tutorial Video 🖥️', url='https://youtu.be/OTqZmADyOjU')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
