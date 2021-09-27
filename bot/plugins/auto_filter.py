@@ -223,8 +223,8 @@ async def auto_filter(bot, update):
         try:
             await bot.send_photo(
                 chat_id = update.chat.id,
-                photo="https://telegra.ph/file/3ccccbdb70ca3fb14db06.jpg",
-                caption=f"<b>🗣️𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} \n\n📀𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- <code>{query}</code> 📽️\n🗂️𝐓𝐨𝐭𝐚𝐥 𝐑𝐞𝐬𝐮𝐥𝐭𝐬:- {(len_results)} \n\n♻️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲:- @movies_Hubh2 </b>",
+                photo="https://telegra.ph/file/e6094ea988ae04edc0d7f.jpg",
+                caption=f"<b>♻️𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝👉:- {update.from_user.mention} \n🎞️𝐌𝐨𝐯𝐢𝐞:- <code>{query}</code> 📽️\n⭕️ᴹᴬˣ 𝐑𝐞𝐬𝐮𝐥𝐭𝐬:- {(len_results)} \n\n♻️<b>քʀօɖʊƈɛɖ ɮʏ</b>👉:- @Movies_Club_2019</b>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
