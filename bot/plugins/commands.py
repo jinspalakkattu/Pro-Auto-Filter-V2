@@ -89,10 +89,10 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/joinchat/NGvoejZMNlQ5Mjg1'),
-        InlineKeyboardButton('𝙷𝚎𝚕𝚙 🤔', callback_data="help")
+        InlineKeyboardButton('♻️ɢʀօʊք♻️', url='https://t.me/Movies_Club_2019'),
+        InlineKeyboardButton('🛠️ɦɛʟք🛠️', callback_data="help")
     ],[
-        InlineKeyboardButton('🔰 Malayalam Movies 🔰', url='https://t.me/Kala_Movies')
+        InlineKeyboardButton('🎞️օȶȶ ʊքɖǟȶɛֆ🎞️', url='https://t.me/mcnewmovies')
    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -100,7 +100,7 @@ async def start(bot, update):
     await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/fe98b3ef0ecd39f908a2f.jpg",
-                caption=f"<b>എന്റെ പ്രാർത്ഥനങ്ങൾ അഡ്മിന്റെ വാക്കുകൾക്കാണ്</b>\n\n<b>എന്റെ അഡ്മിന്റെ അവകാശമില്ലാതെ എന്നെ ഉപയോഗിക്കാൻ പറ്റില്ല</b>",
+                caption=f"<b><u><i>⭕️മക്കളെ അണ്ണൻ RE-ENTRY അടിച്ചു തിരിച്ചു വന്നു</i></u></b>\n\n<b>⭕️ഇനി എന്റെ കളികൾ👉 @Movies_Club_2019 ൽ <\b> \n\n <b><u>⭕️അവിടെ കാണാം എല്ലാരും താഴെയുള്ള ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്ത് കേറി വാ</u></b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
