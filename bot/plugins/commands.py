@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰𝙊𝙁𝙁𝙄𝘾𝙄𝘼𝙇 𝘾𝙃𝘼𝙉𝙉𝙀𝙇🔰', url="https://t.me/mcnewmovies"
                                 )
                         ]
                     ]
@@ -57,7 +57,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰𝙊𝙁𝙁𝙄𝘾𝙄𝘼𝙇 𝘾𝙃𝘼𝙉𝙉𝙀𝙇🔰', url="https://t.me/mcnewmovies"
                                 )
                         ]
                     ]
@@ -76,7 +76,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔰 Official Channel 🔰', url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1"
+                                    '🔰𝙊𝙁𝙁𝙄𝘾𝙄𝘼𝙇 𝘾𝙃𝘼𝙉𝙉𝙀𝙇🔰', url="https://t.me/mcnewmovies"
                                 )
                         ]
                     ]
@@ -109,10 +109,10 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-        InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝 🚩', callback_data='about')
+        InlineKeyboardButton('ℍ𝕆𝕄𝔼', callback_data='start'),
+        InlineKeyboardButton('𝔸𝔹𝕆𝕌𝕋', callback_data='about')
     ],[
-        InlineKeyboardButton('🔐 𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+        InlineKeyboardButton('ℂ𝕃𝕆𝕊𝔼', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -130,12 +130,12 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('👤 @𝙼𝚛𝚔_𝚈𝚃 👤', url='https://t.me/MRK_YT')
+        InlineKeyboardButton('𝐎𝐖𝐍𝐄𝐑', url='https://t.me/Myfreak123')
     ],[
-        InlineKeyboardButton('👤 @𝙰𝚕𝚋𝚎𝚛𝚝𝙴𝚒𝚗𝚜𝚝𝚎𝚒𝚗𝚃𝙶 👤', url='https://t.me/AlbertEinsteinTG')
+        InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏', url='https://t.me/Movies_Club_2019')
     ],[
-        InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-        InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+        InlineKeyboardButton('𝐇𝐎𝐌𝐄', callback_data='start'),
+        InlineKeyboardButton('𝐂𝐋𝐎𝐒𝐄', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
