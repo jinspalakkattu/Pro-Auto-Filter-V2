@@ -62,7 +62,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("Ⓜ️𝙅𝙊𝙄𝙉 𝘾𝙃𝘼𝙉𝙉𝙀𝙇Ⓜ️", url="https://t.me/Movies_Club_2019")
+                    InlineKeyboardButton("[𝙅𝙊𝙄𝙉 𝘾𝙃𝘼𝙉𝙉𝙀𝙇]", url="https://t.me/Movies_Club_2019")
                 ]
             )
         for filter in filters: # iterating through each files
@@ -86,7 +86,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"Ⓜ️{file_size}©️{file_name}"
+            button_text = f"{file_size}{file_name}"
             
 
             if file_type == "video":
@@ -133,7 +133,7 @@ async def auto_filter(bot, update):
     else:
         Send_message = await bot.send_message(
             chat_id=update.chat.id,
-            text="<b><u><i>𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐅𝐢𝐧𝐝 𝐓𝐡𝐢𝐬 𝐌𝐨𝐯𝐢𝐞𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐖𝐢𝐭𝐡 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</u></i></b>",
+            text="<b><u><i>𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐅𝐢𝐧𝐝 𝐓𝐡𝐢𝐬 𝐌𝐨𝐯𝐢𝐞𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐖𝐢𝐭𝐡 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 ഈ സിനിമയുടെ ഒറിജിനൽ പേര് താഴെയുള്ള ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</u></i></b>",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -173,7 +173,7 @@ async def auto_filter(bot, update):
         
         # Just A Decaration
         result[0].append([
-            InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"🔰Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
         ])
         
         
