@@ -62,7 +62,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("🔘 JOIN OUR MAIN CHANNEL 🔘", url="https://t.me/joinchat/NGvoejZMNlQ5Mjg1")
+                    InlineKeyboardButton("Ⓜ️𝙅𝙊𝙄𝙉 𝘾𝙃𝘼𝙉𝙉𝙀𝙇Ⓜ️", url="https://t.me/Movies_Club_2019")
                 ]
             )
         for filter in filters: # iterating through each files
@@ -224,7 +224,7 @@ async def auto_filter(bot, update):
             await bot.send_photo(
                 chat_id = update.chat.id,
                 photo="https://telegra.ph/file/e6094ea988ae04edc0d7f.jpg",
-                caption=f"<b>♻️𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝👉:- {update.from_user.mention} \n🎞️𝐌𝐨𝐯𝐢𝐞:- <code>{query}</code> 📽️\n⭕️ᴹᴬˣ 𝐑𝐞𝐬𝐮𝐥𝐭𝐬:- {(len_results)} \n\n♻️<b>քʀօɖʊƈɛɖ ɮʏ</b>👉:- @Movies_Club_2019</b>",
+                caption=f"<b>♻️𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝👉:- {update.from_user.mention} \n\n🎞️𝐌𝐨𝐯𝐢𝐞:- <code>{query}</code> 📽️\n\n⭕️ᴹᴬˣ 𝐑𝐞𝐬𝐮𝐥𝐭𝐬:- {(len_results)} \n\n♻️<b>քʀօɖʊƈɛɖ ɮʏ</b>👉:- @Movies_Club_2019</b>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
