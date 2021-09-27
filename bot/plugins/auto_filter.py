@@ -131,14 +131,20 @@ async def auto_filter(bot, update):
             )
         
     else:
-        await bot.send_photo(
-                chat_id = update.chat.id,
-                photo="https://telegra.ph/file/3ccccbdb70ca3fb14db06.jpg",
-                caption=f"<b>🗣️𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} \n\n📀𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- <code>{query}</code>\n\n♻️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲:- @movies_Hubh2 </b>",
-                reply_markup=reply_markup,
-                parse_mode="html",
-                reply_to_message_id=update.message_id
-        )
+        Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text="<b>Couldn't Find This MovieTry Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🔎Search In Google🔎", url=f"https://google.com/search?q={query}", # URL
+                        "കാണാപ്പി", url=f"https://t.me/mallubros"
+                    )
+                ]
+            ]
+        ),
+            reply_to_message_id=update.message_id
         await asyncio.sleep(10)
         await Send_message.delete()
     
