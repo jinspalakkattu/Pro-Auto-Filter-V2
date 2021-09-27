@@ -104,7 +104,7 @@ async def start(bot, update):
     
     await bot.send_photo(
                 chat_id = update.chat.id,
-                photo= "https://telegram.me/share/url?url=https://telegra.ph/file/e6094ea988ae04edc0d7f.jpg",
+                photo= "https://telegra.ph/file/9e4771df0f2f210ba05df.jpg",
                 caption=f"<b>എന്റെ പ്രാർത്ഥനങ്ങൾ അഡ്മിന്റെ വാക്കുകൾക്കാണ്</b>\n\n<b>എന്റെ അഡ്മിന്റെ അവകാശമില്ലാതെ എന്നെ ഉപയോഗിക്കാൻ പറ്റില്ല</b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
