@@ -100,7 +100,7 @@ async def start(bot, update):
     await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/fe98b3ef0ecd39f908a2f.jpg",
-                caption=f"<b><u><i>⭕️മക്കളെ അണ്ണൻ RE-ENTRY അടിച്ചു തിരിച്ചു വന്നു</i></u></b>\n <b>⭕️ഇനി എന്റെ കളികൾ👉 @Movies_Club_2019 ൽ</b>\n <b><u>⭕️അവിടെ കാണാം എല്ലാരും താഴെയുള്ള ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്ത് കേറി വാ</u></b>",
+                caption=f"<b>😎ഞാൻ ധാ 👉 @Movies_Club_2019 👈ഇവിടുത്തെ കില്ലാടി ആണ്</b>\n <b><u>😎എന്റെ പവർ കാണാണോ ഗ്രൂപ്പിൽ കേറി വാ</u></b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
@@ -131,8 +131,6 @@ async def about(bot, update):
     
     buttons = [[
         InlineKeyboardButton('👤 @𝙼𝚛𝚔_𝚈𝚃 👤', url='https://t.me/MRK_YT')
-    ],[
-        InlineKeyboardButton('👤 @𝙰𝚕𝚋𝚎𝚛𝚝𝙴𝚒𝚗𝚜𝚝𝚎𝚒𝚗𝚃𝙶 👤', url='https://t.me/AlbertEinsteinTG')
     ],[
         InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
         InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
