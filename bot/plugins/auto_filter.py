@@ -86,7 +86,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"{file_size}{file_name}"
+            button_text = f"Ⓜ️{file_size}©️{file_name}"
             
 
             if file_type == "video":
@@ -133,17 +133,17 @@ async def auto_filter(bot, update):
     else:
         Send_message = await bot.send_message(
             chat_id=update.chat.id,
-            text="<b>Couldn't Find This MovieTry Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
+            text="<b><u><i>𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐅𝐢𝐧𝐝 𝐓𝐡𝐢𝐬 𝐌𝐨𝐯𝐢𝐞𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐖𝐢𝐭𝐡 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 ഈ സിനിമയുടെ ഒറിജിനൽ പേര് താഴെയുള്ള ബട്ടണിൽ ക്ലിക്ക് ചെയത് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</i></u></b>",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         "🔎Search In Google🔎", url=f"https://google.com/search?q={query}" # URL
-                        "കാണാപ്പി", url=f"https://t.me/mallubros"
                     )
                 ]
             ]
         ),
+            reply_to_message_id=update.message_id
             reply_to_message_id=update.message_id
         await asyncio.sleep(10)
         await Send_message.delete()
