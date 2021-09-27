@@ -1599,27 +1599,27 @@ async def cb_about(bot, update: CallbackQuery):
         return
 
     text=f"<i><u>Bot's Status</u></i>\n"
-    text+=f"\n<b><i>Bot's Uptime:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
-    text+=f"\n<b><i>Bot Funtion:</i></b> <i>Pro Auto File Filter Bot</i>\n"
-    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/Mo_TECH_YT">MoTechYT</a>\n"""
-    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/MRK_YT/Pro-Auto-Filter-Bot">Source</a>"""
+    text+=f"\n<b><i>Bot's Uptime🧭:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
+    text+=f"\n<b><i>Bot Funtion🛠️:</i></b> <i>KILLADI GANESH😎</i>\n"
+    text+=f"""\n<b><i>More Updates🚫:</i></b> <a href="https://t.me/Movies_Club_2019">SUPPORT</a>\n"""
+    text+="""\n<b><i>Source Code📑:</i></b> <a href="https://t.me/mcallmovies/36">Source Code</a>"""
 
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/MRK_YT"
+                    "ɢʀօʊք", url="https://t.me/Movies_Club_2019"
                 ),
                 
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data="settings"
+                    "Back", callback_data="settings"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "Close", callback_data="close"
                 )
         ]
     ]
@@ -1639,10 +1639,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('GROUP', url='https://t.me/MRK_YT'),
-            InlineKeyboardButton('𝙷𝚎𝚕𝚙', callback_data="help")
+            InlineKeyboardButton('ɠཞơų℘', url='https://t.me/Movies_Club_2019'),
+            InlineKeyboardButton('ɧɛƖ℘', callback_data="help")
         ],[
-            InlineKeyboardButton('CHANNEL', url='https://youtu.be/uAHl5jvnrhk')
+            InlineKeyboardButton('ƈɧąŋŋɛƖ', url='https://t.me/mcnewmovies')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1657,10 +1657,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "help":
         buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('About 🚩', callback_data='about')
+            InlineKeyboardButton('Home', callback_data='start'),
+            InlineKeyboardButton('About', callback_data='about')
         ],[
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('Close', callback_data='close')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1675,12 +1675,12 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
-            InlineKeyboardButton('👤 @𝙼𝚛𝚔_𝚈𝚃 👤', url='https://t.me/MRK_YT')
+            InlineKeyboardButton('ꁅꋪꂦꀎꉣ', url='https://t.me/Movies_Club_2019')
         ],[
-            InlineKeyboardButton('𝙼𝚊𝚜𝚝𝚎𝚛 @𝙰𝚕𝚋𝚎𝚛𝚝𝙴𝚒𝚗𝚜𝚝𝚎𝚒𝚗𝚃𝙶', url='https://t.me/AlbertEinsteinTG')
+            InlineKeyboardButton('ꂦꅏꈤꍟꋪ', url='https://t.me/Myfreak123')
         ],[
-            InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-            InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+            InlineKeyboardButton('ꃅꂦꂵꍟ', callback_data='start'),
+            InlineKeyboardButton('ꉓ꒒ꂦꌗꍟ', callback_data='close')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
