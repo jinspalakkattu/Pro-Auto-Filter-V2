@@ -124,10 +124,7 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('ℍ𝕆𝕄𝔼', callback_data='start'),
-        InlineKeyboardButton('𝔸𝔹𝕆𝕌𝕋', callback_data='about')
-    ],[
-        InlineKeyboardButton('ℂ𝕃𝕆𝕊𝔼', callback_data='close')
+        InlineKeyboardButton('Close', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -145,12 +142,7 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('𝐎𝐖𝐍𝐄𝐑', url='https://t.me/Myfreak123')
-    ],[
-        InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏', url='https://t.me/Movies_Club_2019')
-    ],[
-        InlineKeyboardButton('𝐇𝐎𝐌𝐄', callback_data='start'),
-        InlineKeyboardButton('𝐂𝐋𝐎𝐒𝐄', callback_data='close')
+        InlineKeyboardButton('Close', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
