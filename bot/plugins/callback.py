@@ -1639,10 +1639,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('ɠཞơų℘', url='https://t.me/Movies_Club_2019'),
-            InlineKeyboardButton('ɧɛƖ℘', callback_data="help")
-        ],[
-            InlineKeyboardButton('ƈɧąŋŋɛƖ', url='https://t.me/mcnewmovies')
+            InlineKeyboardButton('☞𝙾𝚆𝙽𝙴𝚁', url='https://t.me/Myfreak123'),
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1675,12 +1672,8 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
-            InlineKeyboardButton('ꁅꋪꂦꀎꉣ', url='https://t.me/Movies_Club_2019')
-        ],[
-            InlineKeyboardButton('ꂦꅏꈤꍟꋪ', url='https://t.me/Myfreak123')
-        ],[
-            InlineKeyboardButton('ꃅꂦꂵꍟ', callback_data='start'),
-            InlineKeyboardButton('ꉓ꒒ꂦꌗꍟ', callback_data='close')
+            InlineKeyboardButton('Home', callback_data='start'),
+            InlineKeyboardButton('Close', callback_data='close')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
