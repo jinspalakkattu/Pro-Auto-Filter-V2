@@ -138,7 +138,7 @@ async def auto_filter(bot, update):
             [
                 [
                     InlineKeyboardButton(
-                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
+                        "♻️𝕊𝕌ℙℙ𝕆ℝ𝕋 𝔾ℝ𝕆𝕌ℙ♻️", url=f"https://t.me/joinchat/GRyjgnhqIdtmNjI9" 
                     )
                 ]
             ]
