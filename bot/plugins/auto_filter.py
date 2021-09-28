@@ -134,6 +134,15 @@ async def auto_filter(bot, update):
                         f"<b><a href='https://t.me/Myfreak123'>👉Admin</a></b>. \n\n"
                         f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക",
                 parse_mode="html",
+                reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
+                    )
+                ]
+            ]
+        ),
                 reply_to_message_id=update.message_id
             )
         await asyncio.sleep(30) # in seconds
