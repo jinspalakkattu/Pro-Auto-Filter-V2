@@ -119,32 +119,29 @@ async def auto_filter(bot, update):
                 bot_ = FIND.get("bot_details")
                 file_link = f"https://t.me/{bot_.username}?start={unique_id}"
             
+            
             results.append(
                 [
-                    InlineKeyboardButton(button_text, url=file_link)
+                    InlineKeyboardButton(file_name, url=file_link)
                 ]
             )
-        
+        #https://telegra.ph/file/f3ea3421859204e383b03.jpg
     else:
-        Send_message = await bot.send_message(
-            chat_id=update.chat.id,
-            text="<b><i>𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐅𝐢𝐧𝐝 𝐓𝐡𝐢𝐬 𝐌𝐨𝐯𝐢𝐞𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐖𝐢𝐭𝐡 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 ഈ സിനിമയുടെ ഒറിജിനൽ പേര് താഴെയുള്ള ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺കിട്ടിയില്ലെങ്കിൽ Report To Admins!</i></b>",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "☞𝚂𝙴𝙰𝚁𝙲𝙷 𝙶𝙾𝙾𝙶𝙻𝙴", url=f"https://google.com/search?q={query}" # URL
-                    )
-                ]
-            ]
-        ),
-            reply_to_message_id=update.message_id
-        )
-        await asyncio.sleep(15)
+        Send_message=await bot.send_video(
+                chat_id=update.chat.id,
+                video="https://telegra.ph/file/3e9f7db0c98e6b236c2c7.mp4",
+                caption=f"Couldn't Find This Movie.Please Try Again Or Search On Our "
+                        f"<b><a href='https://t.me/UFStudio2'>Channel</a></b>. \n\n"
+                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺",
+                parse_mode="html",
+                reply_to_message_id=update.message_id
+            )
+        await asyncio.sleep(15) # in seconds
         await Send_message.delete()
+        # await bot.delete_messages(update.chat.id,update.message_id)
+        return  # return if no files found for that query
     
-
-    if len(results) == 0: # double check
+    if len(results) == 0:   # double check
         return
     
     else:
