@@ -114,7 +114,7 @@ async def start(bot, update):
     
     await bot.send_photo(
                 chat_id = update.chat.id,
-                photo= "https://telegra.ph/file/6b0ba546e4079b077e912.mp4",
+                photo= "http://telegra.ph/file/1027bd4c1cd8b0c36c846.mp4",
                 caption=f"<b>😎ഞാൻ ധാ 👉 @Movies_Club_2019 👈ഇവിടുത്തെ കില്ലാടി ആണ്</b>\n <b><u>എന്റെ പവർ കാണാണോ ഗ്രൂപ്പിൽ കേറി വാ</u></b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
