@@ -112,9 +112,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.send_video(
                 chat_id = update.chat.id,
-                photo= "https://telegra.ph/file/682c7792e6b4bcfd59997.jpg",
+                video= "https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
                 caption=f"<b>😎ഞാൻ ധാ 👉 @Movies_Club_2019 👈ഇവിടുത്തെ കില്ലാടി ആണ്</b>\n <b><u>എന്റെ പവർ കാണാണോ ഗ്രൂപ്പിൽ കേറി വാ</u></b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
