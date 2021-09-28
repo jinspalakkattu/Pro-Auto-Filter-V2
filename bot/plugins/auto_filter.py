@@ -132,20 +132,20 @@ async def auto_filter(bot, update):
                 video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
                 caption=f"Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉"
                         f"<b><a href='https://t.me/Myfreak123'>👉Admin</a></b>. \n\n"
-                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക",
+                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "♻️𝕊𝕌ℙℙ𝕆ℝ𝕋 𝔾ℝ𝕆𝕌ℙ♻️", url=f"https://t.me/joinchat/GRyjgnhqIdtmNjI9" 
+                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/joinchat/Myfreak123" 
                     )
                 ]
             ]
         ),
                 reply_to_message_id=update.message_id
             )
-        await asyncio.sleep(30) # in seconds
+        await asyncio.sleep(25) # in seconds
         await Send_message.delete()
         # await bot.delete_messages(update.chat.id,update.message_id)
         return  # return if no files found for that query
