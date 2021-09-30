@@ -138,14 +138,14 @@ async def auto_filter(bot, update):
             [
                 [
                     InlineKeyboardButton(
-                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/joinchat/Myfreak123" 
+                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/Myfreak123" 
                     )
                 ]
             ]
         ),
                 reply_to_message_id=update.message_id
             )
-        await asyncio.sleep(10) # in seconds
+        await asyncio.sleep(20) # in seconds
         await Send_message.delete()
         # await bot.delete_messages(update.chat.id,update.message_id)
         return  # return if no files found for that query
