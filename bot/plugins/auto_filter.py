@@ -120,12 +120,11 @@ async def auto_filter(bot, update):
                 file_link = f"https://t.me/{bot_.username}?start={unique_id}"
             
             
-            results.append(
-                [
-                    InlineKeyboardButton(button_text, url=file_link)
-                ]
-            )
-        #https://telegra.ph/file/57e33c3853f39c8505247.jpg
+            results.append([
+            InlineKeyboardButton(file_names, url=file_link),
+            InlineKeyboardButton(file_size, url=file_link)
+        ])
+        
     else:
         Send_message=await bot.send_video(
                 chat_id=update.chat.id,
