@@ -138,7 +138,7 @@ async def auto_filter(bot, update):
             [
                 [
                     InlineKeyboardButton(
-                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/Myfreak123" 
+                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/MCrequestAccepter_bot" 
                     )
                 ]
             ]
