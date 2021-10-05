@@ -1639,7 +1639,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('☞𝙾𝚆𝙽𝙴𝚁', url='https://t.me/Myfreak123'),
+            InlineKeyboardButton('Home', callback_data='start'),
+            InlineKeyboardButton('About', callback_data='about')
+        ],[
+            InlineKeyboardButton('Close', callback_data='close')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
