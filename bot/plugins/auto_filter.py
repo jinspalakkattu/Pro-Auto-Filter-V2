@@ -230,7 +230,7 @@ async def auto_filter(bot, update):
             await bot.send_photo(
                 chat_id = update.chat.id,
                 photo="https://telegra.ph/file/cccf6a064c9099e75d54c.jpg",
-                caption=f"""<b>𝐆𝐫𝐨𝐮𝐩:- @Movies_Club_2019
+                caption=f"""<b>𝐆𝐫𝐨𝐮𝐩:- {message.chat.title}
 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- {query} 
 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐮𝐧𝐝:- {(len_results)} 
 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} 
