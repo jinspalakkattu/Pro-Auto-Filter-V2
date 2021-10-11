@@ -229,7 +229,7 @@ async def auto_filter(bot, update):
         try:
             await bot.send_text(
                 chat_id = update.chat.id,
-                text=f"""<b>𝐆𝐫𝐨𝐮𝐩:- {message.chat.title}
+                text=f"""<b>𝐆𝐫𝐨𝐮𝐩:-Group
 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- {query} 
 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐮𝐧𝐝:- {(len_results)} 
 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} 
