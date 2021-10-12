@@ -115,7 +115,7 @@ async def start(bot, update):
     await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/5c8ddb66e9605f3521bfc.jpg",
-                caption=f"<b>𝐻𝐸𝒴 𝐵𝑅𝒪𝒪𝐻🤗\n\n<b>Am Just A Advance Auto Filter Bot....😉You Can't Add me to Your Group </b>😎</b>\n\n\n <b><u>Join🤗@Movies_Club_2019)🤗Then See My pevers🤼‍♂️</u></b>",
+                caption=f"<b>𝐻𝐸𝒴 𝐵𝑅𝒪𝒪𝐻🤗\n\n<b>Am Just A Advance Auto Filter Bot....😉You Can't Add me to Your Group </b>😎</b>\n\n <b><u>Join🤗@Movies_Club_2019🤗\n\nThen See My pevers🤼‍♂️</u></b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
