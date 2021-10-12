@@ -104,10 +104,10 @@ async def start(bot, update):
         return
 
     buttons = [[
-            InlineKeyboardButton('Group', url='https://t.me/Movies_Club_2019'),
-            InlineKeyboardButton('Help', callback_data="help")
+            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
         ],[
-            InlineKeyboardButton('Close', callback_data='close')
+            InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/Myfreak123')
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -115,7 +115,7 @@ async def start(bot, update):
     await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/5c8ddb66e9605f3521bfc.jpg",
-                caption=f"<b>FreFreak girl Of 👉@Movies_Club_2019👈Join Brooh!💗</b>\n <b><u>Then See My pevers🤼‍♂️</u></b>",
+                caption=f"<b>Hey Brooh!How Are You!\n\n<b>Am Just A Advance Auto Filter Bot....😉You Can't Add me to Your Group </b>😎</b>\n <b><u>Join🤗[★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★](https://t.me/Movies_Club_2019)🤗Then See My pevers🤼‍♂️</u></b>",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
