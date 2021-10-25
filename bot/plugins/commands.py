@@ -112,10 +112,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.send_sticker(
                 chat_id = update.chat.id,
-                photo= "https://telegra.ph/file/5c8ddb66e9605f3521bfc.jpg",
-                caption=f"<b>𝐻𝐸𝒴 𝐵𝑅𝒪𝒪𝐻🤗\n\n<b>Am Just A Advance Auto Filter Bot....😉You Can't Add me to Your Group </b>😎</b>\n\n <b><u>Join🤗@Movies_Club_2019🤗\n\nThen See My pevers🤼‍♂️</u></b>",
+                sticker= "CAADBQADMwIAAtbcmFelnLaGAZhgBwI",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
