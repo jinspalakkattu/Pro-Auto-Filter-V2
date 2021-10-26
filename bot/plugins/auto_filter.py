@@ -140,14 +140,15 @@ async def auto_filter(bot, update):
                         f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/MCrequestAccepter_bot" 
-                    )
-                ]
-            ]
-        ),
+                        [
+                            [
+                                InlineKeyboardButton("🔰Join Channel🔰", url=f"https://t.me/MCrequestAccepter_bot")
+                            ],
+                            [
+                                InlineKeyboardButton("🔄Restart🔃", url=f"https://t.me/MCrequestAccepter_bot")
+                            ]
+                        ]
+                    ),
                 reply_to_message_id=update.message_id
             )
         await asyncio.sleep(20) # in seconds
