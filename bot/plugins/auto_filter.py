@@ -142,10 +142,10 @@ async def auto_filter(bot, update):
                 reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("⭕️Search Google", url=f"https://t.me/Movies_Club_2019)
+                                InlineKeyboardButton("🔍Search Google", url=https://t.me/Movies_Club_2019)
                             ],
                             [
-                                "Search In Google", url=f"https://google.com/search?q={query}" # URL
+                                InlineKeyboardButton("♻️Contact Admin♻️", url=f"https://t.me/MCrequestAccepter_bot")
                             ]
                         ]
                     ),
