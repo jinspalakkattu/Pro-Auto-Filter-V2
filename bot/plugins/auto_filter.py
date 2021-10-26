@@ -142,7 +142,7 @@ async def auto_filter(bot, update):
                 reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔍Search Google", url=("🙄ഇത്‌ നീ റിക്വസ്റ്റ് ചെയ്തേ അല്ലലോ പിന്നെന്തിനാ ഇതിൽ കേറി കളിക്കുന്നത്🤭😝",show_alert=True)
+                                InlineKeyboardButton("🔍Search Google", show_alert=("🙄ഇത്‌ നീ റിക്വസ്റ്റ് ചെയ്തേ അല്ലലോ പിന്നെന്തിനാ ഇതിൽ കേറി കളിക്കുന്നത്🤭😝")
                             ],
                             [
                                 InlineKeyboardButton("♻️Contact Admin♻️", url=f"https://t.me/MCrequestAccepter_bot")
