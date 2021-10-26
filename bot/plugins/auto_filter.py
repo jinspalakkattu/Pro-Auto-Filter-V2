@@ -140,14 +140,21 @@ async def auto_filter(bot, update):
                         f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/MCrequestAccepter_bot" 
-                    )
+                    [
+                    [
+                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Imdbfilter_bot?startgroup=true")
+                    ],
+                    [
+                        InlineKeyboardButton("🔰 Group", url="https://t.me/Movies_Club_2019"),
+                        InlineKeyboardButton("📃 Channel", url="https://t.me/mcnewmovies")
+                    ],
+                    [
+                        InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Myfreak123"),
+                        InlineKeyboardButton("😊 𝖠𝖻𝗈𝗎𝗍", url="https://t.me/mcallmovies/46")
+                    ]    
                 ]
-            ]
-        ),
+            )
+         ),
                 reply_to_message_id=update.message_id
             )
         await asyncio.sleep(20) # in seconds
