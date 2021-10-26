@@ -132,12 +132,9 @@ async def auto_filter(bot, update):
             )
         #https://telegra.ph/file/57e33c3853f39c8505247.jpg
     else:
-        Send_message=await bot.send_video(
+        Send_message=await bot.send_sticker(
                 chat_id=update.chat.id,
-                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
-                caption=f"Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉"
-                        f"<b><a href='https://t.me/Myfreak123'>👉Admin</a></b>. \n\n"
-                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)",
+                sticker="CAACAgIAAxkBAAEBI-thd8nMnEHznlQnCjRBYA_v0mfn4gACoQwAAkFaiUlydraHswWy2B4E",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                         [
