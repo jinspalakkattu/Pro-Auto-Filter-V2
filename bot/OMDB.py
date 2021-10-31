@@ -6,7 +6,7 @@ from info import API_KEY
 
 def get_movie_info(movieTitle):
     url = 'http://www.omdbapi.com'
-    api_key = API_KEY
+    api_key = '5061f4b7'
     data = {'apikey':api_key,'t':movieTitle}
     response = requests.get(url,data).json()
 
