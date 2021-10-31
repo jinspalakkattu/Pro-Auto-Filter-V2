@@ -7,8 +7,6 @@ from asyncio import sleep
 from pyrogram import Client, filters
 from pyrogram.types import User, Message
 
-from OMDB import get_movie_info
-
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import ButtonDataInvalid, FloodWait
 
