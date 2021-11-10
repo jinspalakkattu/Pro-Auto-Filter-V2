@@ -160,8 +160,11 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('Close', callback_data='close')
-    ]]
+            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
+        ],[
+            InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/Myfreak123')
+        ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await bot.send_message(
