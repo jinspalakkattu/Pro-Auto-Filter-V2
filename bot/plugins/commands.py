@@ -133,7 +133,7 @@ async def start(bot, update):
     
     await bot.send_sticker(
                 chat_id = update.chat.id,
-                sticker= "CAACAgIAAxkBAAEBIkthdn0aVyTONxI9gAvIOyG-1cD6NAAC1AwAAnqLoEieLyIklDO8mx4E",
+                start_msg= "CAACAgIAAxkBAAEBIkthdn0aVyTONxI9gAvIOyG-1cD6NAAC1AwAAnqLoEieLyIklDO8mx4E",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
