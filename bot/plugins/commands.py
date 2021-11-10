@@ -131,9 +131,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.reply_text(
+    await bot.reply_start(
                 chat_id = update.chat.id,
-                start = "CAACAgIAAxkBAAEBIkthdn0aVyTONxI9gAvIOyG-1cD6NAAC1AwAAnqLoEieLyIklDO8mx4E",
+                text = "CAACAgIAAxkBAAEBIkthdn0aVyTONxI9gAvIOyG-1cD6NAAC1AwAAnqLoEieLyIklDO8mx4E",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
 
