@@ -12,7 +12,7 @@ from info import BOT_TOKEN
 from OMDB import get_movie_info
 #=======================================================================
 
-START_MSG = """<b>Hey {}!!</b>
+START = """<b>Hey {}!!</b>
 STICKER = 'CAACAgUAAxkDAALjS2F9dI-C4OaXKkSgsAxjX1mkofkKAAJXBAAC6aXoV2X6ud6KqXzUHgQ'  
 
 #=======================================================================
@@ -31,7 +31,7 @@ print("Starting Bot..")
 @Sam.on_message(filters.command(['start']) & filters.private)
 def start(client, cmd):
          cmd.reply_sticker(STICKER)
-         cmd.reply_text(START_MSG)
+         cmd.reply_text(START)
                
 @Sam.on_message(filters.text)
 async def imdbcmd(client, message):
