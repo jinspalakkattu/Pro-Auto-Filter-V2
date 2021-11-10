@@ -4,7 +4,7 @@
 
 class Translation(object):
     
-    START_TEXT = """<b>Hello {}!!</b>
+    START = """<b>Hello {}!!</b>
 <u>I Am Auto Filter Bot</u>
 
 <b>Add me to your Group And Channel And Connect Them And See My Magic.
