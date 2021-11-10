@@ -131,7 +131,7 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_sticker(
+    await bot.send_start_msg(
                 chat_id = update.chat.id,
                 start_msg= "CAACAgIAAxkBAAEBIkthdn0aVyTONxI9gAvIOyG-1cD6NAAC1AwAAnqLoEieLyIklDO8mx4E",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
