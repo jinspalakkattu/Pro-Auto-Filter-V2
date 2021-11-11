@@ -130,12 +130,12 @@ async def start(bot, update):
 
     buttons = [[
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/bigmoviesworld'),
-            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Mazhatthullikal')
         ],[
-            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
-            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
+            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/NAZRIYAUPDATES'),
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movieslokammalayalam')
         ],[
-            InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/Myfreak123')
+            InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/kinzanoufal')
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -143,9 +143,9 @@ async def start(bot, update):
     await bot.send_video(
                 chat_id = update.chat.id,
                 video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
-                caption=f"<b>📍Hello:- {update.from_user.mention}</b>Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉</b>"
-                        f"<b><a href='https://t.me/Myfreak123'>👇Admin</a></b>. \n\n"
-                        f"<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Contact Admin👍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക</b>(25 Sec)",
+                caption=f"<b>📍Hello:- {update.from_user.mention}</b>സുഖമാണ?</b>"
+                        f"<b><a href='https://t.me/kinzanoufal'>👇Admin</a></b>. \n\n"
+                        f"<b>നിങ്ങൾ സിനിമ ചോദിക്കുന്നതിനു മുമ്പ് ടൈപ്പ് ചെയ്തത് ശരിയാണോന്ന് പരിശോധിക്കുക.👍അല്ലെങ്കിൽ മുകളിലുള്ള വീഡിയോ കണ്ടു അത് പോലെ അയക്കുക</b>(25 Sec)",
                 parse_mode="html",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
@@ -171,10 +171,10 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
-            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
+            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/bigmoviesworld'),
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/movieslokammalayalam')
         ],[
-            InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/Myfreak123')
+            InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/kinzanoufal')
         ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
