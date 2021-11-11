@@ -134,6 +134,10 @@ async def start(bot, update):
     await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/223c6f225a5a41ef27cf1.jpg",
+                caption=f"<b>📍Hello:- {update.from_user.mention}</b>Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉</b>"
+                        f"<b><a href='https://t.me/Myfreak123'>👇Admin</a></b>. \n\n"
+                        f"<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Contact Admin👍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക</b>(25 Sec)",
+                parse_mode="html",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
         
