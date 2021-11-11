@@ -66,7 +66,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("★ᴏᴡɴᴇʀ™★", url="https://t.me/kinzanoufal")
+                    InlineKeyboardButton("★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★", url="https://t.me/Movies_Club_2019")
                 ]
             )
         for filter in filters: # iterating through each files
@@ -90,7 +90,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"📀{file_size}🎬{file_name}"
+            button_text = f"{file_size}{file_name}"
             
 
             if file_type == "video":
@@ -134,22 +134,22 @@ async def auto_filter(bot, update):
                     InlineKeyboardButton(button_text, url=file_link)
                 ]
             )
-        #https://telegra.ph/file/989aa3bee530006a832ae.jpg
+        #https://telegra.ph/file/57e33c3853f39c8505247.jpg
     else:
         Send_message=await bot.send_video(
                 chat_id=update.chat.id,
-                video="https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
-                caption=f"<b>📍ʜᴇʟʟᴏ {update.from_user.mention}</b> ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴛʜɪꜱ ᴍᴏᴠɪᴇ.ᴘʟᴇᴀꜱᴇ ᴛʀʏ ᴀɢᴀɪɴ ᴏʀ ꜱᴇᴀʀᴄʜ ɢᴏᴏɢʟᴇ ᴏʀ ɴᴏᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ ʀᴇᴘᴏʀᴛ ᴀᴅᴍɪɴꜱ👉</b>"
-                        f"<b><a href='https://t.me/kinzanoufal'>👇ᴀᴅᴍɪɴ</a></b>. \n\n"
-                        f"<b>നിങ്ങൾ സിനിമ ചോദിക്കുമ്പോൾ ഇംഗ്ലീഷിൽ അയക്കുക🔍 അയക്കേണ്ട രീതി അറിയാൻ മുകളിലെ വീഡിയോ കാണുക.</b>(അഥവാ നിങ്ങൾക്ക് മൂവി കിട്ടുന്നില്ലെങ്കിൽ ഞങ്ങളെ അറിയിക്കുക)",
+                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
+                caption=f"<b>Hai 💞Mwone💞Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉</b>"
+                        f"<b><a href='https://t.me/Myfreak123'>👇Admin</a></b>. \n\n"
+                        f"<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Contact Admin👍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക</b>(25 Sec)",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔍ꜱᴇᴀʀᴄʜ ɢᴏᴏɢʟᴇ", url=f"https://t.me/bigmoviesworld")
+                                InlineKeyboardButton("🔍Search Google", url=f"https://t.me/mcallmovies/206")
                             ],
                             [
-                                InlineKeyboardButton("♻️ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ♻️", url=f"https://t.me/kinzanoufal")
+                                InlineKeyboardButton("♻️Contact Admin♻️", url=f"https://t.me/MCrequestAccepter_bot")
                             ]
                         ]
                     ),
@@ -234,8 +234,8 @@ async def auto_filter(bot, update):
         try:
             await bot.send_photo(
                 chat_id = update.chat.id,
-                photo= "https://telegra.ph/file/4afhttps://telegra.ph/file/989aa3bee530006a832ae.jpg8709f22d7c752fa63b.jpg",
-                caption=f"<b>📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ :</b> <code>{query}</code>\n<b>🗂️Total File :- {(len_results)} </b>\n<b>📍ʀᴇqᴜᴇꜱᴛᴇᴅ ʙʏ:- {update.from_user.mention}</b>\n<b>🔔 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ : [<a href='https://t.me/bigmoviesworld'>Ⓜ️©സിനിമകൾⓂ️©</a>]</b>\n<b>⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/NAZRIYAUPDATES'>ɴᴀᴢʀɪʏᴀ</a>]</b>\n<b>👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ꜱʜᴀʀᴇ ᴀɴᴅ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ &  ᴄʜᴀɴɴᴇʟ </code></b>",
+                photo= "https://telegra.ph/file/4af8709f22d7c752fa63b.jpg",
+                caption=f"<b>📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ :</b> <code>{query}</code>\n<b>🗂️Total File :- {(len_results)} </b>\n<b>📍Requested By:- {update.from_user.mention}</b>\n<b>🔔 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ : [<a href='https://t.me/mcnewmovies'>Ⓜ️©സിനിമകൾⓂ️©</a>]</b>\n<b>⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Movies_Club_2019'>M🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱</a>]</b>\n<b>👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code></b>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
@@ -260,62 +260,3 @@ async def gen_invite_links(db, group_id, bot, update):
         return
     
     Links = []
-    if chats:
-        for x in chats:
-            Name = x["chat_name"]
-            
-            if Name == None:
-                continue
-            
-            chatId=int(x["chat_id"])
-            
-            Link = await bot.export_chat_invite_link(chatId)
-            Links.append({"chat_id": chatId, "chat_name": Name, "invite_link": Link})
-
-        INVITE_LINK[str(group_id)] = Links
-    return 
-
-
-async def recacher(group_id, ReCacheInvite=True, ReCacheActive=False, bot=Bot, update=Message):
-    """
-    A Funtion To rechase invite links and active chats of a specific chat
-    """
-    global INVITE_LINK, ACTIVE_CHATS
-
-    if ReCacheInvite:
-        if INVITE_LINK.get(str(group_id)):
-            INVITE_LINK.pop(str(group_id))
-        
-        Links = []
-        chats = await db.find_chat(group_id)
-        chats = chats["chat_ids"]
-        
-        if chats:
-            for x in chats:
-                Name = x["chat_name"]
-                chat_id = x["chat_id"]
-                if (Name == None or chat_id == None):
-                    continue
-                
-                chat_id = int(chat_id)
-                
-                Link = await bot.export_chat_invite_link(chat_id)
-                Links.append({"chat_id": chat_id, "chat_name": Name, "invite_link": Link})
-
-            INVITE_LINK[str(group_id)] = Links
-    
-    if ReCacheActive:
-        
-        if ACTIVE_CHATS.get(str(group_id)):
-            ACTIVE_CHATS.pop(str(group_id))
-        
-        achats = await db.find_active(group_id)
-        achatId = []
-        if achats:
-            for x in achats["chats"]:
-                achatId.append(int(x["chat_id"]))
-            
-            ACTIVE_CHATS[str(group_id)] = achatId
-    return 
-
-
