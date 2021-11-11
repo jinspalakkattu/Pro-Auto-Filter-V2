@@ -13,7 +13,7 @@ from OMDB import get_movie_info
 #=======================================================================
 
 START_TEXT = """<b>Hey {}!!</b>
-PHOTO = 'CAACAgUAAxkDAALjS2F9dI-C4OaXKkSgsAxjX1mkofkKAAJXBAAC6aXoV2X6ud6KqXzUHgQ'  
+PHOTO = 'https://telegra.ph/file/223c6f225a5a41ef27cf1.jpg'  
 
 #=======================================================================
 
