@@ -14,6 +14,8 @@ Please Subscribe <a href='https://t.me/c/1481808444/140'>❤️ @tgbotsProject</
 </b>"""  
      CAPTION_TEXT """<b>Hello {}!!</b>
 <u>I Am Auto Filter Bot</u>
+<b>Add me to your Group And Channel And Connect Them And See My Magic.
+
     
     HELP_TEXT = """
 <b><u>How to Use Me!</u></b>
