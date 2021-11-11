@@ -131,9 +131,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_sticker(
+    await bot.send_photo(
                 chat_id = update.chat.id,
-                sticker= "https://telegra.ph/file/223c6f225a5a41ef27cf1.jpg",
+                photo= "https://telegra.ph/file/223c6f225a5a41ef27cf1.jpg",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )
         
