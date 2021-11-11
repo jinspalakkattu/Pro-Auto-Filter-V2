@@ -27,7 +27,7 @@ async def start(bot, update):
                 [
                     [
                         InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                        InlineKeyboardButton('ℹ️ Help', callback_data='help')
+                        InlineKeyboardButton("try Again",url="https://t.me/Movies_Club_2019")
                     ]
             ]
         )
@@ -129,7 +129,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
+            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
         ],[
             InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
