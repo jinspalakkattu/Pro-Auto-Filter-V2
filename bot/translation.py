@@ -11,11 +11,7 @@ class Translation(object):
 
 For More Details Click Help Button Below.
 Please Subscribe <a href='https://t.me/c/1481808444/140'>❤️ @tgbotsProject</a>
-</b>"""  
-     CAPTION_TEXT """<b>Hello {}!!</b>
-<u>I Am Auto Filter Bot</u>
-<b>Add me to your Group And Channel And Connect Them And See My Magic.
-
+</b>"""    
     
     HELP_TEXT = """
 <b><u>How to Use Me!</u></b>
@@ -52,3 +48,4 @@ Please Subscribe <a href='https://t.me/c/1481808444/140'>❤️ @tgbotsProject</
 
 <b>Please Subscribe</b> <a href='https://t.me/c/1481808444/140'>❤️ @tgbotsProject</a>
 """
+
