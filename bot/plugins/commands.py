@@ -135,30 +135,10 @@ async def start(bot, update):
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/223c6f225a5a41ef27cf1.jpg",
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
-            )
-
-         return
-
-    buttons = [[
-        InlineKeyboardButton('👮 Developers', url='https://t.me/c/1417456571/587'),
-        InlineKeyboardButton('Source Code 👨‍💻', url ='https://github.com/tgbotsProject/auto-filter-bot')
-    ],[
-        InlineKeyboardButton('👥 Support 👥', url='https://t.me/izaute/5')
-    ],[
-        InlineKeyboardButton('🆘 Help & Information 🆘', callback_data="help")
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
-
+            )         
+    await asyncio.sleep(20) # in seconds
+    await Send_message.delete()
+        
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
