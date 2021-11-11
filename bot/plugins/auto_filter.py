@@ -260,3 +260,62 @@ async def gen_invite_links(db, group_id, bot, update):
         return
     
     Links = []
+    if chats:
+        for x in chats:
+            Name = x["chat_name"]
+            
+            if Name == None:
+                continue
+            
+            chatId=int(x["chat_id"])
+            
+            Link = await bot.export_chat_invite_link(chatId)
+            Links.append({"chat_id": chatId, "chat_name": Name, "invite_link": Link})
+
+        INVITE_LINK[str(group_id)] = Links
+    return 
+
+
+async def recacher(group_id, ReCacheInvite=True, ReCacheActive=False, bot=Bot, update=Message):
+    """
+    A Funtion To rechase invite links and active chats of a specific chat
+    """
+    global INVITE_LINK, ACTIVE_CHATS
+
+    if ReCacheInvite:
+        if INVITE_LINK.get(str(group_id)):
+            INVITE_LINK.pop(str(group_id))
+        
+        Links = []
+        chats = await db.find_chat(group_id)
+        chats = chats["chat_ids"]
+        
+        if chats:
+            for x in chats:
+                Name = x["chat_name"]
+                chat_id = x["chat_id"]
+                if (Name == None or chat_id == None):
+                    continue
+                
+                chat_id = int(chat_id)
+                
+                Link = await bot.export_chat_invite_link(chat_id)
+                Links.append({"chat_id": chat_id, "chat_name": Name, "invite_link": Link})
+
+            INVITE_LINK[str(group_id)] = Links
+    
+    if ReCacheActive:
+        
+        if ACTIVE_CHATS.get(str(group_id)):
+            ACTIVE_CHATS.pop(str(group_id))
+        
+        achats = await db.find_active(group_id)
+        achatId = []
+        if achats:
+            for x in achats["chats"]:
+                achatId.append(int(x["chat_id"]))
+            
+            ACTIVE_CHATS[str(group_id)] = achatId
+    return 
+
+
