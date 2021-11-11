@@ -137,7 +137,7 @@ async def start(bot, update):
     reply_markup=reply_markup,        reply_to_message_id=update.message_id
             )         
     await asyncio.sleep(20) # in seconds
-    await Send_message.delete()
+    await Send_photo.delete()
         
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
