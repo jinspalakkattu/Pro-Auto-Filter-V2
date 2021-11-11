@@ -29,15 +29,10 @@ async def start(bot, update):
                         InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
                         InlineKeyboardButton("🔄ᴛʀʏ ᴀɢᴀɪɴ🔄", url="https://t.me/bigmoviesworld")
                     ]
-                ]
-                if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{message.command[1]}")])
-        await client.send_message(
-            chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
-            reply_markup=InlineKeyboardMarkup(btn),
-            parse_mode="markdown"
-            )      
+            ]
+        )
+    )
+                      
             return
         except Exception:
             await update.reply_text("Something Wrong. Contact my Support Group")
