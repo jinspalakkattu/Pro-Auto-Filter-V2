@@ -27,7 +27,7 @@ async def start(bot, update):
                 [
                     [
                         InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                        InlineKeyboardButton("🔄ᴛʀʏ ᴀɢᴀɪɴ🔄", callback_data=f"channel_update#{file_id}")
+                        InlineKeyboardButton("🔄ᴛʀʏ ᴀɢᴀɪɴ🔄", callback_data=f"update_channel#{file_id}")
                     ]
                 ]
             )
