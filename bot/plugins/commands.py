@@ -129,7 +129,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help'),
+            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{update.from_user.mention}?start=help'),
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
         ],[
             InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
