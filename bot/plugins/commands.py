@@ -126,6 +126,9 @@ async def start(bot, update):
             InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
         ],[
+            InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
+        ],[
             InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/Myfreak123')
         ]]
     
