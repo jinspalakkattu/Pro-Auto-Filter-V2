@@ -27,7 +27,7 @@ async def start(bot, update):
                 [
                     [
                         InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                        InlineKeyboardButton("🔄ᴛʀʏ ᴀɢᴀɪɴ🔄", url="https://t.me/bigmoviesworld")
+                        InlineKeyboardButton('ℹ️ Help', callback_data='help')
                     ]
             ]
         )
