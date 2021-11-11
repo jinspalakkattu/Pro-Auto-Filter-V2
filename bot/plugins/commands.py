@@ -139,7 +139,9 @@ async def start(bot, update):
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
-    
+    await message.reply(Translation.START_TEXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+    await asyncio.sleep(2) 
+                                 
     await bot.send_video(
                 chat_id = update.chat.id,
                 video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
