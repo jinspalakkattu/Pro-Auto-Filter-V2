@@ -13,7 +13,7 @@ from OMDB import get_movie_info
 #=======================================================================
 
 START_TEXT = """<b>Hey {}!!</b>
-STICKER = 'CAACAgUAAxkDAALjS2F9dI-C4OaXKkSgsAxjX1mkofkKAAJXBAAC6aXoV2X6ud6KqXzUHgQ'  
+PHOTO = 'CAACAgUAAxkDAALjS2F9dI-C4OaXKkSgsAxjX1mkofkKAAJXBAAC6aXoV2X6ud6KqXzUHgQ'  
 
 #=======================================================================
 
@@ -30,7 +30,7 @@ print("Starting Bot..")
 
 @Sam.on_message(filters.command(['start']) & filters.private)
 def start(client, cmd):
-         cmd.reply_sticker(STICKER)
+         cmd.reply_sticker(PHOTO)
          cmd.reply_text(START_TEXT)
                
 @Sam.on_message(filters.text)
