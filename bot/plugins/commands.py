@@ -129,7 +129,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{update.from_user.mention}?start=help'),
+            InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url=f"https://t.me/bigmoviesworld'),
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movies_Club_2019')
         ],[
             InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/mcnewmovies'),
@@ -139,8 +139,6 @@ async def start(bot, update):
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply(Translation.START_TEXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
-    await asyncio.sleep(2) 
                                  
     await bot.send_video(
                 chat_id = update.chat.id,
