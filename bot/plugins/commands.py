@@ -13,30 +13,6 @@ db = Database()
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
     update_channel = "@bigmoviesworld"
-    if update_channel:
-        try:
-            user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked out":
-               await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣")
-               return
-        except UserNotParticipant:
-            #await update.reply_text(f"Join @{update_channel} To Use Me")
-            await update.reply_text(
-                text="❣ READ THIS INSTRUCTION ❣ \n\n🗣️ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍 \n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately...😍 \n\nJoin Our Main Channel 🙏</b>",
-                reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                        InlineKeyboardButton("try Again",url="https://t.me/Movies_Club_2019")
-                    ]
-            ]
-        )
-    )
-                      
-            return
-        except Exception:
-            await update.reply_text("Something Wrong. Contact my Support Group")
-            return
     try:
         file_uid = update.command[1]
     except IndexError:
@@ -47,6 +23,33 @@ async def start(bot, update):
         
         if (file_id or file_type) == None:
             return
+      
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked out":
+               await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣")
+               return
+        except UserNotParticipant:
+#             await update.reply_text(f"Join @{update_channel} To Use Me")
+            file_link = f"https://t.me/{bot.username}?start={file_uid}"
+            await update.reply_text(
+                text="❣ READ THIS INSTRUCTION ❣ \n\n🗣️ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍 \n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately...😍 \n\nJoin Our Main Channel 🙏</b>",
+                reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
+                        InlineKeyboardButton("try Again",url=file_link)
+                    ]
+            ]
+        )
+    )
+                      
+            return
+        except Exception:
+            await update.reply_text("Something Wrong. Contact my Support Group")
+            return
+    
         
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
         
