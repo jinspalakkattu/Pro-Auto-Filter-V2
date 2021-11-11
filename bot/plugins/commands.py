@@ -131,14 +131,11 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.send_sticker(
                 chat_id = update.chat.id,
-                photo= "https://telegra.ph/file/4af8709f22d7c752fa63b.jpg",
-                text=Translation.CAPTION_TEXT,
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
+                sticker= "https://telegra.ph/file/223c6f225a5a41ef27cf1.jpg",
+    reply_markup=reply_markup,        reply_to_message_id=update.message_id
+            )
         
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
