@@ -4,6 +4,13 @@
 
 class Translation(object):
     
+    AUTH_CHANNEL = Noan
+    
+    START_MSG = """
+**Hi, I'm Media Search bot**
+Here you can search files in inline mode. Just press follwing buttons and start searching.
+"""
+    
     START_TEXT = """<b>Hello {}!!</b>
 <u>I Am Auto Filter Bot</u>
 
