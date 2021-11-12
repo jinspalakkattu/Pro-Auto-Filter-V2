@@ -19,6 +19,7 @@ async def connect(bot: Bot, update):
     """
     chat_id = update.chat.id
     user_id = update.from_user.id if update.from_user else None
+    print(update.text)
     target_chat = update.text.split(None, 1)
     global VERIFY
     
