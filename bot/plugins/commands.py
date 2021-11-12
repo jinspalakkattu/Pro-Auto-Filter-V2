@@ -33,18 +33,18 @@ async def start(bot, update):
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
+            file_link = f"https://t.me/{bot.get_me().username}?start={file_uid}"
             await update.reply_text(
                 text="❣ READ THIS INSTRUCTION ❣ \n\n🗣️ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍 \n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately...😍 \n\nJoin Our Main Channel 🙏</b>",
                 reply_markup=InlineKeyboardMarkup(
-                [
                     [
-                        InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                        InlineKeyboardButton("try Again",url="https://t.me/Movies_Club_2019")
+                        [
+                            InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton("try Again",url=file_link)
+                        ]
                     ]
-            ]
-        )
-    )
-                      
+                )
+            )                      
             return
         except Exception:
             await update.reply_text("Something Wrong. Contact my Support Group")
@@ -62,21 +62,21 @@ async def start(bot, update):
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
-            [
-                [
+                    [
+                        [
                     InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
-                ],
-                [
-                    InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
-                    InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
-                ],
-                [
-                    InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
-                    InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
-                ]
-            ]
-        )
-    )
+                        ],
+                        [
+                            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
+                        ],
+                        [
+                            InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
+                        ]
+                    ]
+                )
+            )
 
         elif file_type == "video":
         
@@ -86,21 +86,21 @@ async def start(bot, update):
                 caption = caption,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
-                ],
-                [
-                    InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
-                    InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
-                ],
-                [
-                    InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
-                    InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
-                ]
-            ]
-        )
-    )
+                    [
+                        [
+                            InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
+                        ],
+                        [
+                            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
+                        ],
+                        [
+                            InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
+                        ]
+                    ]
+                )
+            )
             
         elif file_type == "audio":
         
@@ -110,48 +110,53 @@ async def start(bot, update):
                 caption = caption,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
-                ],
-                [
-                    InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
-                    InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
-                ],
-                [
-                    InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
-                    InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
-                ]
-            ]
-        )
-    )
+                    [
+                        [
+                            InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
+                        ],
+                        [
+                            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
+                        ],
+                        [
+                            InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
+                            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
+                        ]
+                    ]
+                )
+            )
 
         else:
             print(file_type)
         
         return
 
-    buttons = [[
+    buttons = [
+        [
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/bigmoviesworld'),
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Mazhatthullikal')
-        ],[
+        ],
+        [
             InlineKeyboardButton('★[ᴄʜᴀɴɴᴇʟ]★', url='https://t.me/NAZRIYAUPDATES'),
             InlineKeyboardButton('★[ɢʀᴏᴜᴘ]★', url='https://t.me/Movieslokammalayalam')
-        ],[
+        ],
+        [
             InlineKeyboardButton('☬ད D̾E̾V̾ ཌ☬', url='https://t.me/kinzanoufal')
-        ]]
+        ]
+    ]
     
     reply_markup = InlineKeyboardMarkup(buttons)
                                  
     await bot.send_video(
-                chat_id = update.chat.id,
-                video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
-                caption=f"<b>📍Hello:- {update.from_user.mention}</b> സുഖമാണ?</b>"
-                        f"<b><a href='https://t.me/kinzanoufal'>👇Admin</a></b>. \n\n"
-                        f"<b>നിങ്ങൾ സിനിമ ചോദിക്കുന്നതിനു മുമ്പ് ടൈപ്പ് ചെയ്തത് ശരിയാണോന്ന് പരിശോധിക്കുക.👍അല്ലെങ്കിൽ മുകളിലുള്ള വീഡിയോ കണ്ടു അത് പോലെ അയക്കുക</b>(25 Sec)",
-                parse_mode="html",
-    reply_markup=reply_markup,        reply_to_message_id=update.message_id
-            )
+        chat_id = update.chat.id,
+        video= "https://telegra.ph/file/ec5404d035924f1113d8d.mp4",
+        caption=f"<b>📍Hello:- {update.from_user.mention}</b> സുഖമാണ?</b>"
+        f"<b><a href='https://t.me/kinzanoufal'>👇Admin</a></b>. \n\n"
+        f"<b>നിങ്ങൾ സിനിമ ചോദിക്കുന്നതിനു മുമ്പ് ടൈപ്പ് ചെയ്തത് ശരിയാണോന്ന് പരിശോധിക്കുക.👍അല്ലെങ്കിൽ മുകളിലുള്ള വീഡിയോ കണ്ടു അത് പോലെ അയക്കുക</b>(25 Sec)",
+        parse_mode="html",
+        reply_markup=reply_markup,        
+        reply_to_message_id=update.message_id
+    )
                     
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
