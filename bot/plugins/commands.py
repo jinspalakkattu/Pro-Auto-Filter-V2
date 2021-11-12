@@ -12,7 +12,7 @@ db = Database()
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-    update_channel = "@bigmoviesworld"
+    update_channel = "@TESTUFSCHANNEL"
     file_uid = False
     
     try:
