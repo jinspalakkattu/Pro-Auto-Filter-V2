@@ -25,111 +25,111 @@ async def start(bot, update):
         if (file_id or file_type) == None:
             return
 
-    if update_channel:
-        try:
-            user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked out":
-               await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣")
-               return
-        except UserNotParticipant:
-            #await update.reply_text(f"Join @{update_channel} To Use Me")
-            file_link = f"https://t.me/{bot.get_me().username}?start={file_uid}"
-            await update.reply_text(
-                text="❣ READ THIS INSTRUCTION ❣ \n\n🗣️ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍 \n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately...😍 \n\nJoin Our Main Channel 🙏</b>",
-                reply_markup=InlineKeyboardMarkup(
-                    [
+        if update_channel:
+            try:
+                user = await bot.get_chat_member(update_channel, update.chat.id)
+                if user.status == "kicked out":
+                   await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣")
+                   return
+            except UserNotParticipant:
+                #await update.reply_text(f"Join @{update_channel} To Use Me")
+                file_link = f"https://t.me/{bot.get_me().username}?start={file_uid}"
+                await update.reply_text(
+                    text="❣ READ THIS INSTRUCTION ❣ \n\n🗣️ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍 \n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately...😍 \n\nJoin Our Main Channel 🙏</b>",
+                    reply_markup=InlineKeyboardMarkup(
                         [
-                            InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton("try Again",url=file_link)
+                            [
+                                InlineKeyboardButton("📽ɢᴏʀᴜᴘ📽", url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton("try Again",url=file_link)
+                            ]
                         ]
-                    ]
-                )
-            )                      
-            return
-        except Exception:
-            await update.reply_text("Something Wrong. Contact my Support Group")
-            return
-    
-        
-        caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
-        
-        if file_type == "document":
-        
-            await bot.send_document(
-                chat_id=update.chat.id,
-                document = file_id,
-                caption =f"<b>FILM NAME📽️</b>: <code><b> {file_name}</b> </code>\n<b>❤️Join [★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★] For New Movies.</b>\n❤️<u> 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</u> \n\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱  \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @MCmoviesall➻ \n👥𝕲𝖗𝖔𝖚𝖕 : @Movies_Club_2019 ➻ \n👥𝕲𝖗𝖔𝖚𝖕 : @Movies_Club_2019",
-                parse_mode="html",
-                reply_to_message_id=update.message_id,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                    InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
-                        ],
-                        [
-                            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
-                        ],
-                        [
-                            InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
-                        ]
-                    ]
-                )
-            )
+                    )
+                )                      
+                return
+            except Exception:
+                await update.reply_text("Something Wrong. Contact my Support Group")
+                return
 
-        elif file_type == "video":
-        
-            await bot.send_video(
-                chat_id=update.chat.id,
-                video = file_id,
-                caption = caption,
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
-                        ],
-                        [
-                            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
-                        ],
-                        [
-                            InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
-                        ]
-                    ]
-                )
-            )
-            
-        elif file_type == "audio":
-        
-            await bot.send_audio(
-                chat_id=update.chat.id,
-                audio = file_id,
-                caption = caption,
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
-                        ],
-                        [
-                            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
-                        ],
-                        [
-                            InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
-                            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
-                        ]
-                    ]
-                )
-            )
 
-        else:
-            print(file_type)
-        
-        return
+            caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
+
+            if file_type == "document":
+
+                await bot.send_document(
+                    chat_id=update.chat.id,
+                    document = file_id,
+                    caption =f"<b>FILM NAME📽️</b>: <code><b> {file_name}</b> </code>\n<b>❤️Join [★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★] For New Movies.</b>\n❤️<u> 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</u> \n\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱  \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @MCmoviesall➻ \n👥𝕲𝖗𝖔𝖚𝖕 : @Movies_Club_2019 ➻ \n👥𝕲𝖗𝖔𝖚𝖕 : @Movies_Club_2019",
+                    parse_mode="html",
+                    reply_to_message_id=update.message_id,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                        InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
+                            ],
+                            [
+                                InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
+                            ],
+                            [
+                                InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
+                            ]
+                        ]
+                    )
+                )
+
+            elif file_type == "video":
+
+                await bot.send_video(
+                    chat_id=update.chat.id,
+                    video = file_id,
+                    caption = caption,
+                    parse_mode="html",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
+                            ],
+                            [
+                                InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
+                            ],
+                            [
+                                InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
+                            ]
+                        ]
+                    )
+                )
+
+            elif file_type == "audio":
+
+                await bot.send_audio(
+                    chat_id=update.chat.id,
+                    audio = file_id,
+                    caption = caption,
+                    parse_mode="html",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton('𝙎𝙃𝘼𝙍𝙀', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/bigmoviesworld")
+                            ],
+                            [
+                                InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton('𝙊𝙏𝙏 𝙍𝙀𝙇𝙀𝘼𝙎𝙀', url="https://t.me/bigmoviesworld")
+                            ],
+                            [
+                                InlineKeyboardButton('𝙎𝙐𝙋𝙋𝙊𝙍𝙏', url="https://t.me/bigmoviesworld"),
+                                InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url="https://t.me/bigmoviesworld")
+                            ]
+                        ]
+                    )
+                )
+
+            else:
+                print(file_type)
+
+            return
 
     buttons = [
         [
