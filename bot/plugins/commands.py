@@ -13,6 +13,18 @@ db = Database()
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
     update_channel = "@bigmoviesworld"
+    
+    try:
+        file_uid = update.command[1]
+    except IndexError:
+        file_uid = False
+    
+    if file_uid:
+        file_id, file_name, file_caption, file_type = await db.get_file(file_uid)
+        
+        if (file_id or file_type) == None:
+            return
+
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
@@ -37,16 +49,7 @@ async def start(bot, update):
         except Exception:
             await update.reply_text("Something Wrong. Contact my Support Group")
             return
-    try:
-        file_uid = update.command[1]
-    except IndexError:
-        file_uid = False
     
-    if file_uid:
-        file_id, file_name, file_caption, file_type = await db.get_file(file_uid)
-        
-        if (file_id or file_type) == None:
-            return
         
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
         
