@@ -47,8 +47,8 @@ async def start(bot, update):
                     )
                 )                      
                 return
-            except Exception e:
-                await update.reply_text(f"Something Wrong. Contact my Support Group\n{e}")
+            except Exception as e:
+                await update.reply_text(f"Something Wrong. Contact my Support Group\n{str(e)}")
                 return
 
 
